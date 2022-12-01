@@ -11,3 +11,9 @@
 0.56
 11
 """
+number = input()
+sum_number = 0
+for lm in number:
+    if lm.isdigit():
+        sum_number += int(lm)
+print(f"Сумма цифр равна: {sum_number}")

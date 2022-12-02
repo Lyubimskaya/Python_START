@@ -11,7 +11,7 @@ num = int(input("Введите число: "))
 new_list = [random.randint(-num, num) for r in range(num)]
 index_list = []
 res = 1
-with open('indexes.txt', encoding = 'UTF-8') as data:
+with open('Users\lyubi\python2\Python_START\HW_2\indexes.txt', 'r' ) as data:
     for index in data:
         index_list.append(int(index))
 for i in range(-num, num):

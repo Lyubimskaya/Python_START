@@ -15,4 +15,4 @@ f = 1
 for i in range(1, n + 1):
     f *= i
     my_list.append(f)
-print(my_list)    
+print(my_list)

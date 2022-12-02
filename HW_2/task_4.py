@@ -6,15 +6,15 @@
 Ввод: значение типа <int>
 Вывод: значение типа <int>
 """
-import random
-num = int(input("Введите число: "))
-new_list = [random.randint(-num, num) for r in range(num)]
-index_list = []
+
+from random import randint
+num = int(input("Введите натуральное число: "))
+my_list = [randint(-num, num) for _ in range(num)]
+print(my_list)
 res = 1
-with open('Users\lyubi\python2\Python_START\HW_2\indexes.txt', 'r' ) as data:
-    for index in data:
-        index_list.append(int(index))
-for i in range(-num, num):
-    if i in index_list:
-        res *= new_list[i]
+with open('indexes.txt', 'r') as file:
+    for line in file:
+        index = int(line)
+        if num > index >= -num:
+            res *= my_list[index]
 print(res)

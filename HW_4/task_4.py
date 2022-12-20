@@ -19,7 +19,7 @@ def parser(polynom):
         return {}
     polynom = polynom[:polynom.find("=")]
     map_polynom = map(str.strip, polynom.split("+"))
-    dict_polynom = {}  # берем данные которые находятся в выводе строки  засовываем в словарь, куда попадает коэффициент и степень
+    dict_polynom = {}  
     for data in map_polynom:
         if "x" in data:
             if "^" in data:
@@ -32,26 +32,20 @@ def parser(polynom):
     return dict_polynom
 
 
-# принимаем два полинома, которые мы суммируем
 def sum_polynom(poly1, poly2):
-    # и далее эти два полинома парсим
     res_polynom = parser(poly1)
     dict_polynom = parser(poly2)
-    for key in dict_polynom:  # проходим по словарю, и если присутствент множитель в обеих словарях
-        # get обращается по ключу, но он не выдает ошибки если ключа нет. Он возвращает элемент,который находится на втором месте
+    for key in dict_polynom:  
         val = res_polynom.get(key)
         if val:
-            # тогда мы их суммируем
             res_polynom[key] += dict_polynom[key]
-        else:  # если в одном словаре множителя нет
-            # тогда сюда его добавляем
+        else:  
             res_polynom[key] = dict_polynom[key]
-    # lалее  наш словарь передаем в Ф create_polynom где превращаем в строчку
     return create_polynom(res_polynom)
 
 
 def create_polynom(dict_polynom):
-    new_polynom = ""  # создание полинома
+    new_polynom = ""  
     plus = False
     for key in sorted(dict_polynom)[::-1]:
         if plus:

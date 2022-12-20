@@ -84,3 +84,4 @@ if __name__ == '__main__':
     with open("sum_polynom.txt", 'w') as file:  # Запись в файл
         file.write(str_polynom)
         print("Результат записан в файл sum_polynom.txt")
+        

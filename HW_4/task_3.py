@@ -53,8 +53,8 @@ if __name__ == '__main__':
         if not path.isfile(f"polynom_{i}. txt"):
             with open(f"polynom_{i}.txt", 'w') as file:
                 file.write(str_polynom)
-                print(f"Результат записан в файл polynom_{i}.txt")
+                print(
+                    f"Результат записан в файл polynom_{i}.txt")
             break
         else:
             i += 1
-            

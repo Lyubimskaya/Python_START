@@ -104,40 +104,131 @@
 #     """
 #     return input('Введите Фамилию: ')
 
+# from logger import log
+
+
+# @log
+# def grettings():
+#     '''Приветствие'''
+#     print('Я справочник')
+
+
+# @log
+# def menu() -> str:
+#     '''Меню справочника'''
+#     return input('Выберите пункт меню: \n'
+#                  '1 - показать справочник \n'
+#                  '2 - добавить запись \n'
+#                  '3 - выход \n')
+
+
+# @log
+# def print_book(data: list):
+#     for el in data:
+#         print(
+#             f'Имя: {el["first_name"]} | {el["last_name"]} | {el["phone_number"]} | {el["birthda"]} | {el["workplace"]} | {el["id"]}')
+#     if not data:
+#         print('Нет данных для отображения')
+
+
+# @log
+# def input_data():
+#     book = {}
+#     book['id'] = ''
+#     book["first_name"] = input('Введите имя: ')
+#     book["last_name"] = input('Введите фамилию: ')
+#     book["phone_number"] = input('Введите телефон: ')
+#     book["birthda"] = input('Введите дату рождения: ')
+#     book["workplace"] = input('Введите место работы: ')
+#     return book
+
 from logger import log
 
 
 @log
-def grettings():
-    '''Приветствие'''
-    print('Я справочник')
+def greatings():
+    print('Телефонный справочник ')
+    pass
 
 
 @log
-def menu() -> str:
-    '''Меню справочника'''
-    return input('Выберите пункт меню: \n'
-                 '1 - показать справочник \n'
-                 '2 - добавить запись \n'
-                 '3 - выход \n')
+def menu() -> int:
+    print('Меню')
+    print(
+        '0 - Выход \n1 - Загрузить из файла и вывести на экран \n2 - Добавить новую запись '
+        '\n3 - Редактировать запись по id \n4 - Поиск по фамилии \n')
+    return int(input("Введите пункт меню: "))
 
 
 @log
 def print_book(data: list):
-    for el in data:
-        print(
-            f'Имя: {el["first_name"]} | {el["last_name"]} | {el["phone_number"]} | {el["birthda"]} | {el["workplace"]} | {el["id"]}')
+    """Вывод в консоль данных содержимого справочника"""
+    for my_dict in data:
+        print("id:", my_dict['id'])
+        print("Имя:", my_dict['first_name'])
+        print("Фамилия:", my_dict['last_name'])
+        print("Телефон:", *my_dict['phone_number'])
+        print("Дата рождения:", my_dict['birthday'])
+        print("Место работы:", my_dict['workplace'])
+        print("----")
     if not data:
-        print('Нет данных для отображения')
+        print("<-Нет данных для отображения->")
+        print()
 
 
 @log
-def input_data():
-    book = {}
-    book['id'] = ''
-    book["first_name"] = input('Введите имя: ')
-    book["last_name"] = input('Введите фамилию: ')
-    book["phone_number"] = input('Введите телефон: ')
-    book["birthda"] = input('Введите дату рождения: ')
-    book["workplace"] = input('Введите место работы: ')
-    return book
+def add_record() -> dict:
+    """Диалог добавления записи.
+    :return Cловарь с данными записи.:"""
+    my_dict = {}
+    tel_list = []
+
+    my_dict['first_name'] = input('Введите имя : ')
+    my_dict['last_name'] = input('Введите фамилию : ')
+    while True:
+        data = input('Введите номер телефона (для выхода нажмите Enter) : ')
+        if data:
+            tel_list.append(data)
+        else:
+            break
+    my_dict['phone_number'] = tel_list
+    my_dict['birthday'] = input('Дата рождения: ')
+    my_dict['workplace'] = input('Место работы: ')
+    return my_dict
+
+
+@log
+def request_id() -> int:
+    """Запрос id от пользователя
+    :return id:"""
+    return int(input('Введите id: '))
+
+
+@log
+def editor(data: dict) -> dict:
+    """:param data: Выбранная запись
+    :return отредактированная запись:"""
+    # new_dict = {}
+    data['first_name'] = input(f"Имя: {data['first_name']}. Введите новое имя: ")
+
+    data['last_name'] = input(f"Фамилия: {data['last_name']} Введите новую фамилию: ")
+    print("Телефон:", *data['phone_number'])
+    tel_list = []
+    while True:
+        tel = input('Введите номер телефона (для выхода нажмите Enter) : ')
+        if tel:
+            tel_list.append(tel)
+        else:
+            break
+    data['phone_number'] = tel_list
+    data['birthday'] = input(f"Дата рождения: {data['birthday']} Введите новую дату: ")
+    data['workplace'] = input(f"Место работы: {data['workplace']} Введите новое место работы: ")
+
+    return data
+
+
+@log
+def request_last_name() -> str:
+    """Запрос фамилии от пользователя
+    :return фамилия:"""
+    return input('Введите Фамилию: ')

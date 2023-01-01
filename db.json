@@ -1,10 +1,18 @@
 [
   {
     "id": 1,
-    "first_name": "аа",
-    "last_name": "пп",
-    "phone_number": "55",
-    "birthda": "44",
-    "workplace": "пп"
+    "first_name": "анна",
+    "last_name": "петрова",
+    "phone_number": "777",
+    "birthda": "17.09.1990",
+    "workplace": "ооо радуга"
+  }
+  {
+    "id": 2,
+    "first_name": "ирина",
+    "last_name": "петрова",
+    "phone_number": "888",
+    "birthda": "17.09.1990",
+    "workplace": "ооо дождь"
   }
 ]

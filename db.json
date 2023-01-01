@@ -1,26 +1,10 @@
-{
-  "last_id": {
-    "id": 6
-  },
-  "items": [
-    {
-      "id": 1,
-      "first_name": "Антон",
-      "last_name": "Иванов",
-      "birthday": "13.10.1999",
-      "phone_number": [
-        "89242567896"
-      ]
-    },
-    {
-      "first_name": "Ирина",
-      "last_name": "Алешина",
-      "phone_number": [
-        "555",
-        "666"
-      ],
-      "birthday": "14.06.1990",
-      "id": 2
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "first_name": "аа",
+    "last_name": "пп",
+    "phone_number": "55",
+    "birthda": "44",
+    "workplace": "пп"
+  }
+]

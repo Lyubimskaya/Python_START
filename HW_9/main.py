@@ -10,7 +10,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         f'/decod - расшифровка кода \n')
 
 bot_token = "введите токен"
-app = app = ApplicationBuilder().token(bot_token).build()    
+app = ApplicationBuilder().token(bot_token).build()    
 
 async def bin_number(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     input_num = update.message.text.split()

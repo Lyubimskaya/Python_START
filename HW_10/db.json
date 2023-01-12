@@ -1,0 +1,48 @@
+{
+    "last_id": {
+      "id": 4
+    },
+    "items": [
+      {
+        "id": 1,
+        "first_name": "Антон",
+        "last_name": "Иванов",
+        "birthday": "11.02.2002",
+        "workplace": "врач",
+        "phone_number": [
+          "89244568750"
+        ]
+      },
+      {
+        "first_name": "Елена",
+        "last_name": "Алешина",
+        "phone_number": [
+          "89137864390",
+          "89007858765"
+        ],
+        "birthday": "11.11.1980",
+        "workplace": "продавец",
+        "id": 2
+      },
+      {
+        "first_name": "Михаил",
+        "last_name": "Петров",
+        "phone_number": [
+          "89566543278"
+        ],
+        "birthday": "12.12.1988",
+        "workplace": "военный",
+        "id": 3
+      },
+      {
+        "first_name": "Оксана",
+        "last_name": "Рудова",
+        "phone_number": [
+          "89646586311"
+        ],
+        "birthday": "21.09.1997",
+        "workplace": "программист",
+        "id": 4
+      }
+    ]
+  }

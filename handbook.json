@@ -1,0 +1,18 @@
+[
+  {
+    "first_name": "Антон",
+    "last_name": "Синичкин",
+    "birth_day": "11.12.2000",
+    "phone": "123",
+    "class": "4",
+    "id": 1
+  },
+  {
+    "first_name": "Елена",
+    "last_name": "Гришина",
+    "birth_day": "23.08.2002",
+    "phone": "789",
+    "class": "5",
+    "id": 2
+  }
+]

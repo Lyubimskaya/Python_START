@@ -1,0 +1,29 @@
+{
+  "last_id": {
+    "id": 2
+  },
+  "items": [
+    {
+      "id": 1,
+      "first_name": "Анна",
+      "last_name": "Иванова",
+      "birthday": "06.01.1994",
+      "workplace": "магазин",
+      "phone_number": [
+        "2778599544",
+        "6950484776",
+        "3344556677"
+      ]
+    },
+    {
+      "first_name": "Алена",
+      "last_name": "Прошина",
+      "phone_number": [
+        "111"
+      ],
+      "birthday": "08.01.2002",
+      "workplace": "завод",
+      "id": 2
+    }
+  ]
+}
